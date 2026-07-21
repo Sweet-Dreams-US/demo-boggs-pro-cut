@@ -154,14 +154,14 @@ export default function AdminPage() {
                     ))}
                   </ul>
                 </Card>
-                <Card className="bg-boggs-steel text-boggs-cream ring-boggs-steel">
+                <div className="rounded-2xl bg-boggs-steel text-boggs-cream p-5">
                   <p className="font-head font-bold mb-1">Weather · Fort Wayne</p>
                   <p className="font-display text-4xl chiseled">28°F</p>
                   <p className="text-sm text-boggs-cream/80 mt-1">Snow likely overnight — 3-5&quot;</p>
                   <div className="mt-4 rounded-lg bg-boggs-cream/10 px-3 py-2 text-sm font-head font-semibold text-boggs-grass">
                     ❄ Plow-day alert: activate winter routes
                   </div>
-                </Card>
+                </div>
               </div>
             </div>
           )}
@@ -205,12 +205,12 @@ export default function AdminPage() {
                   </div>
                 </Card>
               ))}
-              <Card className="bg-boggs-steel text-boggs-cream ring-boggs-steel">
+              <div className="rounded-2xl bg-boggs-steel text-boggs-cream p-5">
                 <p className="font-head font-bold">❄ Winter plow routes (priority)</p>
                 <p className="text-sm text-boggs-cream/80 mt-1">
                   Commercial lots cleared first (5am), then residential seasonal contracts by zone.
                 </p>
-              </Card>
+              </div>
             </div>
           )}
 
