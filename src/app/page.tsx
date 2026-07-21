@@ -238,9 +238,24 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <div className="overflow-hidden rounded-3xl ring-1 ring-white/15 shadow-soft">
+            <div className="relative overflow-hidden rounded-3xl ring-1 ring-white/15 shadow-soft">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={MEDIA.map} alt="Boggs Pro Cut service area map — Allen County, Indiana" className="w-full aspect-[4/3] object-cover" />
+              <img src={MEDIA.map} alt="Boggs Pro Cut service area — Allen County, Indiana centered on Fort Wayne" className="w-full aspect-[4/3] object-cover" />
+              {/* Only marker on the map: Fort Wayne, centered */}
+              <div className="absolute left-1/2 top-[49%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <svg width="30" height="30" viewBox="0 0 24 24" className="drop-shadow-md" aria-hidden="true">
+                  <path
+                    d="M12 2c-3.9 0-7 3.1-7 7 0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"
+                    fill="#7CA24B"
+                    stroke="#F4EFE6"
+                    strokeWidth="1.5"
+                  />
+                  <circle cx="12" cy="9" r="2.6" fill="#233D26" />
+                </svg>
+                <span className="mt-1.5 rounded-full bg-boggs-cream px-3 py-1 font-head text-sm font-bold text-boggs-green shadow-md">
+                  Fort Wayne
+                </span>
+              </div>
             </div>
           </Reveal>
         </div>

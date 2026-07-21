@@ -16,7 +16,7 @@ export const MEDIA = {
   hardscape: img("hardscape.webp"),
   snow: img("snow.webp"),
   crew: img("crew.webp"),
-  map: img("map.webp"),
+  map: `${MEDIA_BASE}/map.webp?v=3`,
   bedBefore: img("bed-before.webp"),
   bedAfter: img("bed-after.webp"),
 };
