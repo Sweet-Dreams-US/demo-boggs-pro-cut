@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Reveal from "@/components/reveal";
-import { MEDIA } from "@/lib/media";
 import { BIZ, DIFFERENCE } from "@/lib/content";
 
 export const metadata = {
@@ -26,9 +25,24 @@ export default function StoryPage() {
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <div className="overflow-hidden rounded-3xl shadow-soft ring-1 ring-white/10">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={MEDIA.crew} alt="The Boggs Pro Cut crew" className="w-full aspect-[3/2] object-cover" />
+            {/* Brand video placeholder — drop in the real Boggs brand/crew video here */}
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-3xl ring-1 ring-white/15 bg-boggs-green shadow-soft grain">
+              <div className="absolute inset-0 grid place-items-center">
+                <div className="text-center px-6">
+                  <span className="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-full bg-boggs-grass text-boggs-black shadow-md">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                  <p className="font-display text-2xl md:text-3xl text-boggs-cream chiseled">Brand video here</p>
+                  <p className="mt-1.5 font-head text-xs uppercase tracking-[0.22em] text-boggs-cream/60">
+                    Boggs crew &amp; craftsmanship reel
+                  </p>
+                </div>
+              </div>
+              <span className="absolute left-4 top-4 rounded-full bg-boggs-black/40 px-3 py-1 text-[0.65rem] font-head font-bold uppercase tracking-widest text-boggs-cream/80">
+                Placeholder
+              </span>
             </div>
           </Reveal>
         </div>
