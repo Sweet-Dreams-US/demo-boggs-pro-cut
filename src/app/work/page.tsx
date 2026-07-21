@@ -16,7 +16,6 @@ const GALLERY = [
   { src: MEDIA.lawn, tag: "Lawn Care", title: "Crisp cut lines & clean edging", town: "New Haven" },
   { src: MEDIA.snow, tag: "Snow Removal", title: "Driveway plowed before dawn", town: "Leo-Cedarville" },
   { src: MEDIA.after, tag: "Full-Yard Makeover", title: "Complete backyard transformation", town: "Fort Wayne" },
-  { src: MEDIA.map, tag: "Coverage", title: "Serving all of Allen County", town: "Allen County" },
 ];
 
 export default function WorkPage() {

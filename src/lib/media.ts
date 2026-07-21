@@ -2,7 +2,10 @@
 export const MEDIA_BASE =
   "https://vhyjphcwfvrcclqberoe.supabase.co/storage/v1/object/public/demo-media/demo-boggs-pro-cut";
 
-export const img = (file: string) => `${MEDIA_BASE}/${file}`;
+// Bump when regenerating media so CDN/browser caches fetch the fresh assets.
+export const MEDIA_VERSION = "2";
+
+export const img = (file: string) => `${MEDIA_BASE}/${file}?v=${MEDIA_VERSION}`;
 
 export const MEDIA = {
   before: img("before.webp"),
@@ -22,4 +25,4 @@ export const MEDIA = {
 export const SCROLL_FRAME_BASE = `${MEDIA_BASE}/frames`;
 export const SCROLL_FRAME_COUNT = 96; // f0001..f0096
 export const scrollFrame = (i: number) =>
-  `${SCROLL_FRAME_BASE}/f${String(i).padStart(4, "0")}.webp`;
+  `${SCROLL_FRAME_BASE}/f${String(i).padStart(4, "0")}.webp?v=${MEDIA_VERSION}`;
