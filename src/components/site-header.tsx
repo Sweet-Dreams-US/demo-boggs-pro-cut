@@ -64,7 +64,34 @@ export default function SiteHeader() {
         </button>
       </div>
 
-      {/* Mobile nav — opens at the top */}
+      {/* Mobile: nav open at the top (condenses on scroll) — honors brief mobile.nav_open_top */}
+      <div
+        className={`md:hidden overflow-hidden bg-boggs-cream/95 backdrop-blur border-t border-boggs-cream-dim transition-all duration-300 ${
+          scrolled || open ? "max-h-0 opacity-0" : "max-h-16 opacity-100"
+        }`}
+      >
+        <nav className="flex items-center gap-2 overflow-x-auto no-scrollbar px-4 py-2.5">
+          {NAV.slice(0, 4).map((n) => (
+            <Link
+              key={n.href}
+              href={n.href}
+              className={`shrink-0 rounded-full px-3.5 py-1.5 text-sm font-head font-semibold whitespace-nowrap ${
+                pathname === n.href ? "bg-boggs-green text-boggs-cream" : "bg-white text-boggs-black/70 ring-1 ring-boggs-cream-dim"
+              }`}
+            >
+              {n.label}
+            </Link>
+          ))}
+          <Link
+            href="/estimate"
+            className="shrink-0 rounded-full bg-boggs-grass px-3.5 py-1.5 text-sm font-head font-bold text-boggs-black whitespace-nowrap"
+          >
+            Free Estimate
+          </Link>
+        </nav>
+      </div>
+
+      {/* Mobile full menu (hamburger) */}
       <div
         className={`md:hidden overflow-hidden border-t border-boggs-cream-dim bg-boggs-cream transition-[max-height] duration-300 ${
           open ? "max-h-96" : "max-h-0"
