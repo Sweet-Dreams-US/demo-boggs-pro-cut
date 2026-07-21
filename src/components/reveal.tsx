@@ -5,17 +5,26 @@ export default function Reveal({
   children,
   delay = 0,
   className = "",
+  immediate = false,
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
+  immediate?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
+    if (immediate) {
+      setShown(true);
+      return;
+    }
     const el = ref.current;
     if (!el) return;
+    // Safety: if already in view on mount, reveal without waiting for a scroll.
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) setShown(true);
     const io = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) {

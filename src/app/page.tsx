@@ -40,7 +40,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-boggs-black/75 via-boggs-black/25 to-transparent" />
         <div className="absolute inset-0 grain opacity-40" />
         <div className="container-wide relative pb-16 md:pb-24 pt-28">
-          <Reveal>
+          <Reveal immediate>
             <p className="eyebrow text-boggs-grass mb-4">Fort Wayne · {BIZ.county}</p>
             <h1 className="font-display text-5xl sm:text-7xl md:text-8xl text-boggs-cream chiseled leading-[0.9] max-w-4xl">
               One local crew.<br />Every season.
